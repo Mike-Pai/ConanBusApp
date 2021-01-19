@@ -3,19 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		991C7F8E25AC275D0024E8C8 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 991C7F8D25AC275D0024E8C8 /* SwiftUIPullToRefresh */; };
+		991C7F9525AC28560024E8C8 /* BusTimeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991C7F9425AC28560024E8C8 /* BusTimeRow.swift */; };
+		994710A325B6FD5A005C1D49 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994710A225B6FD5A005C1D49 /* SwiftUIView.swift */; };
+		9949380825ADDD1B00673834 /* BusFarivaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949380725ADDD1B00673834 /* BusFarivaterView.swift */; };
+		9949380B25ADE0D100673834 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949380A25ADE0D100673834 /* MainTabView.swift */; };
+		9978BBBB25A88E9200C2E703 /* SearchViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978BBBA25A88E9200C2E703 /* SearchViewDelegate.swift */; };
+		9978BBBE25A8B80F00C2E703 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9978BBBD25A8B80F00C2E703 /* MainPageView.swift */; };
+		99A3B3D025A563D300F9245D /* BusDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A3B3CF25A563D300F9245D /* BusDataAPI.swift */; };
 		99B8131925A2F79A001F7919 /* ConanBusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B8131825A2F79A001F7919 /* ConanBusApp.swift */; };
 		99B8131B25A2F79A001F7919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B8131A25A2F79A001F7919 /* ContentView.swift */; };
 		99B8131D25A2F79B001F7919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B8131C25A2F79B001F7919 /* Assets.xcassets */; };
 		99B8132025A2F79B001F7919 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B8131F25A2F79B001F7919 /* Preview Assets.xcassets */; };
 		99B8132225A2F79B001F7919 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B8132125A2F79B001F7919 /* Persistence.swift */; };
 		99B8132525A2F79B001F7919 /* ConanBus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99B8132325A2F79B001F7919 /* ConanBus.xcdatamodeld */; };
+		99DB050625AB3F580028AAAD /* BusStationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB050525AB3F580028AAAD /* BusStationListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		991C7F9425AC28560024E8C8 /* BusTimeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeRow.swift; sourceTree = "<group>"; };
+		994710A225B6FD5A005C1D49 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		9949380725ADDD1B00673834 /* BusFarivaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusFarivaterView.swift; sourceTree = "<group>"; };
+		9949380A25ADE0D100673834 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		9978BBBA25A88E9200C2E703 /* SearchViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewDelegate.swift; sourceTree = "<group>"; };
+		9978BBBD25A8B80F00C2E703 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		99A3B3CF25A563D300F9245D /* BusDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusDataAPI.swift; sourceTree = "<group>"; };
 		99B8131525A2F79A001F7919 /* ConanBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConanBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B8131825A2F79A001F7919 /* ConanBusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConanBusApp.swift; sourceTree = "<group>"; };
 		99B8131A25A2F79A001F7919 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +40,7 @@
 		99B8132125A2F79B001F7919 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		99B8132425A2F79B001F7919 /* ConanBus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConanBus.xcdatamodel; sourceTree = "<group>"; };
 		99B8132625A2F79B001F7919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99DB050525AB3F580028AAAD /* BusStationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStationListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991C7F8E25AC275D0024E8C8 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +75,15 @@
 			isa = PBXGroup;
 			children = (
 				99B8131825A2F79A001F7919 /* ConanBusApp.swift */,
+				9949380A25ADE0D100673834 /* MainTabView.swift */,
 				99B8131A25A2F79A001F7919 /* ContentView.swift */,
+				9949380725ADDD1B00673834 /* BusFarivaterView.swift */,
+				994710A225B6FD5A005C1D49 /* SwiftUIView.swift */,
+				99DB050525AB3F580028AAAD /* BusStationListView.swift */,
+				99A3B3CF25A563D300F9245D /* BusDataAPI.swift */,
+				991C7F9425AC28560024E8C8 /* BusTimeRow.swift */,
+				9978BBBD25A8B80F00C2E703 /* MainPageView.swift */,
+				9978BBBA25A88E9200C2E703 /* SearchViewDelegate.swift */,
 				99B8131C25A2F79B001F7919 /* Assets.xcassets */,
 				99B8132125A2F79B001F7919 /* Persistence.swift */,
 				99B8132625A2F79B001F7919 /* Info.plist */,
@@ -91,6 +117,9 @@
 			dependencies = (
 			);
 			name = ConanBus;
+			packageProductDependencies = (
+				991C7F8D25AC275D0024E8C8 /* SwiftUIPullToRefresh */,
+			);
 			productName = ConanBus;
 			productReference = 99B8131525A2F79A001F7919 /* ConanBus.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 99B8130C25A2F79A001F7919;
+			packageReferences = (
+				991C7F8C25AC275D0024E8C8 /* XCRemoteSwiftPackageReference "SwiftUIPullToRefresh" */,
+			);
 			productRefGroup = 99B8131625A2F79A001F7919 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,9 +177,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				99B8132225A2F79B001F7919 /* Persistence.swift in Sources */,
+				9978BBBE25A8B80F00C2E703 /* MainPageView.swift in Sources */,
+				994710A325B6FD5A005C1D49 /* SwiftUIView.swift in Sources */,
 				99B8131B25A2F79A001F7919 /* ContentView.swift in Sources */,
 				99B8132525A2F79B001F7919 /* ConanBus.xcdatamodeld in Sources */,
+				9949380825ADDD1B00673834 /* BusFarivaterView.swift in Sources */,
+				9949380B25ADE0D100673834 /* MainTabView.swift in Sources */,
+				9978BBBB25A88E9200C2E703 /* SearchViewDelegate.swift in Sources */,
 				99B8131925A2F79A001F7919 /* ConanBusApp.swift in Sources */,
+				99DB050625AB3F580028AAAD /* BusStationListView.swift in Sources */,
+				991C7F9525AC28560024E8C8 /* BusTimeRow.swift in Sources */,
+				99A3B3D025A563D300F9245D /* BusDataAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		991C7F8C25AC275D0024E8C8 /* XCRemoteSwiftPackageReference "SwiftUIPullToRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maguowei/SwiftUIPullToRefresh";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		991C7F8D25AC275D0024E8C8 /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 991C7F8C25AC275D0024E8C8 /* XCRemoteSwiftPackageReference "SwiftUIPullToRefresh" */;
+			productName = SwiftUIPullToRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		99B8132325A2F79B001F7919 /* ConanBus.xcdatamodeld */ = {

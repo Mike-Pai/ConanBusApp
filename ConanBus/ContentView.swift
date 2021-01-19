@@ -7,38 +7,93 @@
 
 import SwiftUI
 import CoreData
+import CryptoKit
+
+
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
-    var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            }
-            .onDelete(perform: deleteItems)
+    
+    @State private var query = ""
+    
+    var filteredBus: [BusPost] {
+             BusRoute.filter { query.isEmpty ? true : $0.RouteUID.lowercased().contains(query.lowercased()) }
         }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+    
+        
+     func Getdata(){
+        request.setValue(xdate, forHTTPHeaderField: "x-date")
+        request.setValue(xdate, forHTTPHeaderField: "")
+        request.setValue(authorization, forHTTPHeaderField: "Authorization")
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            let decoder = JSONDecoder()
+            
+            if let data = data {
+                do {
+                    let searchResponse = try decoder.decode([BusPost].self, from: data)
+                        BusRoute = searchResponse
+                    print(BusRoute)
+                } catch {
+                    print("error")
+                }
             }
-        }
+        }.resume()
     }
-
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \BusFaveriate.id, ascending: true)],
+        animation: .default)
+    private var busfaveruate: FetchedResults<BusFaveriate>
+    @State private var BusRoute = [BusPost]()
+    @State private var GetDataTime = true
+    var body: some View {
+        
+        VStack{
+            SearchBar(text: $query, placeholder: NSLocalizedString("busSelect", comment: ""))
+            
+            List {
+                ForEach(filteredBus,id:\.RouteID){(bus) in
+                    HStack{
+                        NavigationLink(destination: BusStationListView(routeUID: bus.RouteUID, routeID: bus.RouteID, routeName: bus.RouteName)){
+                                                   Text(bus.RouteName.Zh_tw)
+                                               }
+                        Spacer()
+                        Label("加到最愛", systemImage: "heart.circle")
+                            .onTapGesture {
+                                let busfarivate = BusFaveriate(context: viewContext)
+                                busfarivate.routeID = bus.RouteID
+                                busfarivate.routeUID = bus.RouteUID
+                                busfarivate.routeName = bus.RouteName.Zh_tw
+                                addItem()
+                            }
+                   
+                    }
+                    
+                }
+                .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
+               
+                
+                
+            }
+          
+            .onAppear(){
+                if GetDataTime {
+                    Getdata()
+                    GetDataTime = false
+                }
+               
+            }
+            
+           
+        }
+       
+       
+    }
+    
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
+            
             do {
                 try viewContext.save()
             } catch {
@@ -49,11 +104,11 @@ struct ContentView: View {
             }
         }
     }
-
+    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
+            offsets.map { busfaveruate[$0] }.forEach(viewContext.delete)
+            
             do {
                 try viewContext.save()
             } catch {
